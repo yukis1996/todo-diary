@@ -4,6 +4,8 @@
       = icon('fas', 'book', class: 'book')
       Todo-Diary
     .right
+      .logout
+        = link_to "ログアウト", destroy_user_session_path, method: :delete,class:'btn2'
       .new-account
         = link_to new_user_registration_path, class:"new-account" do
           = icon('far', 'user-circle', class: 'book')
@@ -20,4 +22,9 @@
       %br
       %h2毎日を充実させよう!!
     .new
-      始める
+      %a#js-modal-open{href: ""} 始める
+    .modal#js-modal
+      .modal__back#js-modal-close
+      .modal__content
+        = render 'devise/registrations/new'
+        %a#js-modal-close{href: ""} 閉じる
