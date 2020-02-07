@@ -1,6 +1,7 @@
 @import "./reset";
 @import "./background";
 @import "users/*";
+@import "tasks/*";
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
@@ -8,4 +9,8 @@ html {
   margin: 0;
   padding: 0;
   background: $bg-color;
+}
+
+* {
+  box-sizing: border-box;
 }
