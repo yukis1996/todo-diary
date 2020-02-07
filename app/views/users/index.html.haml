@@ -1,20 +1,4 @@
-.header
-  .header__body
-    .left
-      = icon('fas', 'book', class: 'book')
-      Todo-Diary
-    .right
-      .logout
-        = link_to "ログアウト", destroy_user_session_path, method: :delete,class:'btn2'
-      .new-account
-        = link_to new_user_registration_path, class:"new-account" do
-          = icon('far', 'user-circle', class: 'book')
-          新規登録
-      .sign-up
-        = link_to new_user_session_path, class:"sign-up" do
-          = icon('fas', 'sign-in-alt', class: 'book')
-          ログイン
-        //= icon('fas', 'book faa-float animated', class: 'book')のような形でアニメーションをつけられる
+= render 'header'
 .tp-content
   .tp-content__body
     .text
