@@ -1,0 +1,43 @@
+.sign-up {
+  width: 1440px;
+  &__content {
+    width: 500px;
+    margin: 0 auto;
+    padding: 30px;
+    h2 {
+      height: 50px;
+      line-height: 50px;
+      font-size: 16px;
+      text-align: center;
+      background: rgba(243, 209, 181, 0.45);
+      border-radius: 8px;
+    }
+    .field {
+      margin-top: 15px;
+      input {
+        height: 40px;
+        width: 100%;
+      }
+    }
+    .actions {
+      margin-top: 20px;
+      text-align: center;
+      .register {
+        padding: 3px;
+        // background-color: gold;
+        font-size: 17px;
+        border-radius: 5px;
+        border-bottom: solid 3px lightgray;
+        box-shadow: 3px 3px 3px gray;
+        transition: 0.3s;
+      }
+      // .register:hover {
+      //   background-color: orange;
+      // }
+      .click-down:active {
+        transform: translateY(2px);
+        border-bottom: none;
+      }
+    }
+  }
+}
