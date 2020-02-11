@@ -24,16 +24,12 @@
       text-align: center;
       .register {
         padding: 3px;
-        // background-color: gold;
         font-size: 17px;
         border-radius: 5px;
         border-bottom: solid 3px lightgray;
         box-shadow: 3px 3px 3px gray;
         transition: 0.3s;
       }
-      // .register:hover {
-      //   background-color: orange;
-      // }
       .click-down:active {
         transform: translateY(2px);
         border-bottom: none;

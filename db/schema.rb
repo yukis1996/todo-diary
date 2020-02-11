@@ -14,8 +14,8 @@ ActiveRecord::Schema.define(version: 2020_02_06_074016) do
 
   create_table "tasks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.date "day", null: false
-    t.time "beforetime"
-    t.time "aftertime"
+    t.integer "beforetime_id"
+    t.integer "aftertime_id"
     t.string "place"
     t.string "doing", null: false
     t.string "memo"

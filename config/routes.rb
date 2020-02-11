@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   }
   root "users#index"
   resources :users, only: [:index, :show]
-  resources :tasks, only: [:index]
+  resources :tasks
 end
