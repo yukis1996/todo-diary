@@ -1,0 +1,25 @@
+= render 'users/header'
+.today-task
+  .today-task__content
+    %h3 今日の予定
+    .back-task
+      .time-t
+        Time
+      .todo-t
+        Todo
+      .place-t
+        Place
+      .memo-t
+        Memo
+    - @task.each do |task|
+      .back-task
+        .time-t
+          = task.beforetime.name
+          〜
+          = task.aftertime.name
+        .todo-t
+          = task.doing
+        .place-t
+          = task.place
+        .memo-t
+          = task.memo
