@@ -1,0 +1,22 @@
+.task-content
+  .task-content__body
+    .left
+      .left__tasks
+        .tasks-top
+          .tasks-top__time
+        -#     Time :
+        -#     = @task.beforetime.name
+        -#     〜
+        -#     = @task.aftertime.name
+        -#   .tasks-top__place
+        -#     place :
+        -#     = @task.place
+        -#   .tasks-top__delete
+        -#     = link_to  "/tasks/#{@task.id}", method: :delete, class: "trashicon" do
+        -#       = icon("fa","trash faa-flash animated-hover",class: "trash")
+        -# .tasks-center
+        -#   Todo :
+        -#   = @task.doing
+        -# .tasks-bottom
+        -#   Memo :
+        -#   = @task.memo

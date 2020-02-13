@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   root "users#index"
   resources :users, only: [:index, :show]
   resources :tasks
+  # resources :tasks, only: :show, param: :day
 end

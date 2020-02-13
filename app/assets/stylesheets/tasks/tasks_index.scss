@@ -1,0 +1,26 @@
+.today-task {
+  padding-top: 150px;
+  // max-height: 1000px;
+  &__content {
+    margin: 0 auto;
+    width: 1200px;
+    .back-task {
+      display: flex;
+      border: 1px solid;
+      margin-bottom: 3px;
+      padding: 3px 2px;
+      .time-t {
+        width: 13%;
+      }
+      .todo-t {
+        width: 40%;
+      }
+      .place-t {
+        width: 20%;
+      }
+      .memo-t {
+        width: 27%;
+      }
+    }
+  }
+}

@@ -1,11 +1,16 @@
 class TasksController < ApplicationController
+  
+  # require "date"   #Dateクラスを使えるようにする
 
   def index
+    # @today = Date.today  #Date.today(今日の日付)を変数todayに代入する
+    @task = current_user.tasks.where(day: Date.today).order("beforetime_id")
   end
   
   def new
     @task = Task.new
-    @tasks = Task.all
+    @tasks = current_user.tasks.where(created_at: Date.today.beginning_of_day..Date.today.end_of_day)
+    # @tasks = Task.where('created_at >= ?', Date.today).where('created_at =< ?', Date.today)
   end
 
   def create
@@ -17,6 +22,10 @@ class TasksController < ApplicationController
     task = Task.find(params[:id])
     task.destroy
     redirect_to new_task_path
+  end
+
+  def show
+    @task = Task.all.whrer(user_id: current_user.id)
   end
 
   private
