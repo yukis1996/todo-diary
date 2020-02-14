@@ -3,16 +3,16 @@
 
 .header {
   position: fixed;
-  height: 100px;
+  height: 55px;
   width: 100vw;
   background: $bg-color;
   &__body {
     width: 1440px;
     margin: 0 auto;
-    padding: 25px 50px;
+    padding: 0 50px;
     display: flex;
     justify-content: space-between;
-    .left {
+    .left a {
       font-size: 30px;
       font-family: 'Corben', cursive;
       color:lightsalmon;
@@ -21,23 +21,59 @@
       display: flex;
       align-items: center;
       font-size: 18px;
-      a {
-        text-decoration: none;
+      text-align: center;
+      .box a{
+        position: relative;
+        width: 120px;
+        height: 55px;
+        line-height: 55px;
+        display: block;
+        color: #333333;
+        cursor: pointer;
+        }
+      #drop {
+        display: none;
+        position: absolute;
+        padding: 0;
       }
-      .new-account {
+      a::after {
+        position: absolute;
+        bottom: -8px;
+        left: 0;
+        content: '';
+        width: 100%;
+        height: 2px;
+        background: #e0586f;
+        opacity: 0;
+        visibility: hidden;
+        transition: .3s;
+      }
+      a:hover::after {
+        bottom: -2px;
+        opacity: 1;
+        visibility: visible;
+      }
+      .new-account a{
         color: rgb(224, 88, 111);
         margin-right: 10px;
       }
-      .sign-in {
+      .sign-in a{
         color: rgb(74, 116, 207);
       }
+      li:hover {
+        background: rgba(255, 224, 124, 0.63);
+        transition: .3s;
+      }
     }
+  }
+  a {
+    text-decoration: none;
   }
 }
 
 .tp-content {
   height: 500vh;
-  padding-top: 150px;
+  padding-top: 100px;
   &__body {
     margin: 0 auto;
     text-align: center;

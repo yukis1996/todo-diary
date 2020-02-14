@@ -1,8 +1,7 @@
-= render 'users/header'
 .today-task
   .today-task__content
-    %h3 今日の予定
-    .back-task
+    %h3 ＜Today's schedule＞
+    .back-task.index-column
       .time-t
         Time
       .todo-t
@@ -12,7 +11,7 @@
       .memo-t
         Memo
     - @task.each do |task|
-      .back-task
+      .back-task.each-date
         .time-t
           = task.beforetime.name
           〜

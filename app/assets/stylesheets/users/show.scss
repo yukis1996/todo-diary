@@ -1,0 +1,31 @@
+.show-task {
+  display: flex;
+  // border: 1px solid #4a74cf;;
+  margin-bottom: 3px;
+  padding: 4px 3px;
+  .day-show {
+    width: 10%;
+  }
+  .time-show {
+    width: 13%;
+  }
+  .todo-show {
+    width: 35%;
+  }
+  .place-show {
+    width: 17%;
+  }
+  .memo-show {
+    width: 23%;
+  }
+}
+.show-column {
+  background: rgb(74, 116, 207);
+  color: white;
+}
+.each-date {
+  // border: 1px solid #896345;
+  border-radius: 8px;
+  background: #e7e7e7;
+  color: #896345;
+}
