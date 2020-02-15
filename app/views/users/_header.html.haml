@@ -12,7 +12,7 @@
           = link_to "User", "/users/#{current_user.id}"
           %ul#drop
             %li= link_to "My tasks", "/users/#{current_user.id}"
-            %li= link_to "Plofiel", "/users//#{current_user.id}/edit"
+            %li= link_to "Profile", "/users//#{current_user.id}/edit"
         %li.box
           = link_to "Logout", destroy_user_session_path, method: :delete
       - else
