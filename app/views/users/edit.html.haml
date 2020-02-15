@@ -7,8 +7,6 @@
             = image_tag(current_user.image.url, size: "250x250",class: "imageicon")
         .field-image
           = f.file_field :image, autofocus: true
-        .js-remove
-          削除
       .field
         .field-label
           = f.label :nickname
