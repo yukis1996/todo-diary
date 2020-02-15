@@ -1,15 +1,15 @@
 class TasksController < ApplicationController
   
   # require "date"   #Dateクラスを使えるようにする
-
+  # require "time"
   def index
     # @today = Date.today  #Date.today(今日の日付)を変数todayに代入する
-    @task = current_user.tasks.where(day: Date.today).order("beforetime_id")
+    @task = current_user.tasks.where(day: Date.current).order("beforetime_id")
   end
   
   def new
     @task = Task.new
-    @tasks = current_user.tasks.where(created_at: Date.today.beginning_of_day..Date.today.end_of_day)
+    @tasks = current_user.tasks.where(created_at: Date.current.beginning_of_day..Date.current.end_of_day)
     # @tasks = Task.where('created_at >= ?', Date.today).where('created_at =< ?', Date.today)
   end
 
