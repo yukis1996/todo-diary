@@ -1,1 +1,31 @@
-tesut
+.today-task
+  .today-task__content
+    %h3 ＜TaskList＞
+    .show-task.show-column
+      .day-show
+        Day
+      .time-show
+        Time
+      .todo-show
+        Todo
+      .place-show
+        Place
+      .memo-show
+        Memo
+    - @tasks.each do |task|
+      .show-task.each-date
+        .day-show
+          = task.day
+        .time-show
+          = task.beforetime.name
+          〜
+          = task.aftertime.name
+        .todo-show
+          = task.doing
+        .place-show
+          = task.place
+        .memo-show
+          = task.memo
+        .tasks-delete
+          = link_to  "/tasks/#{task.id}", method: :delete, class: "trashicon" do
+            = icon("fa","trash faa-flash animated-hover",class: "trash")
