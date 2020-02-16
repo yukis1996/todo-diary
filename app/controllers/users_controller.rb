@@ -10,7 +10,7 @@ class UsersController < ApplicationController
   end
 
   def edit
-    # @user = current_user.src
+    @task = current_user.tasks.where(day: Date.current).order("beforetime_id")
   end
 
   def update
