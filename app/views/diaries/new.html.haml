@@ -1,0 +1,27 @@
+.today-task
+  .today-task__content
+    .right
+      = form_with(model: @diary, local: true) do |form|
+        .right__form
+          %h1 Todo List
+        .right__box
+          -# .day-form
+          -#   ＜Day＞
+          -#   = form.date_field :day, id: "place"
+          -# .time-form
+          -#   ＜Time＞
+          -#   .time-form__icon
+          -#     = form.collection_select :beforetime_id, Beforetime.all, :id, :name
+          -#     〜
+          -#     = form.collection_select :aftertime_id, Aftertime.all, :id, :name
+          .day-form
+            ＜Place＞
+            = form.text_field :title, placeholder: "場所", id: "place"
+          .day-form
+            ＜Todo＞
+            = form.text_area :impression, placeholder: "やること", id: "place"
+          -# .day-form
+          -#   ＜Memo＞
+          -#   = form.text_field :memo, placeholder: "メモ", id: "place"
+          .submit-btn
+            = form.submit "SEND", class: "send"

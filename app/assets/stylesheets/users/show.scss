@@ -20,12 +20,14 @@
   }
 }
 .show-column {
-  background: rgb(74, 116, 207);
+  background: #0066e2;
   color: white;
+  font-weight: bold;
+  border-bottom: 3px solid #003c86;
 }
 .each-date {
   // border: 1px solid #896345;
-  border-radius: 8px;
-  background: #e7e7e7;
-  color: #896345;
+  background: #efedebc2;
+  color: #333333;
+  border-bottom: 1.5px solid #d7d2cc;
 }

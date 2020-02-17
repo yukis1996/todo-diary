@@ -2,97 +2,117 @@
   height: 100vh;
   padding-top: 100px;
   &__body {
-    width: 1440px;
-    padding: 20px 20px 0;
+    width: 1300px;
     height: 680px;
     margin: 0 auto;
-    display: flex;
     justify-content: space-between;
-    .left {
-      width: 50%;
-      height: 100%;
-      background: white;
-      margin-right: 10px;
-      &__tasks {
-        padding: 5px;
-        margin-bottom: 3px;
-        color: rgb(46, 45, 92);
-        background: #f5f5f5;
-        border: 1px solid ;
-        border-radius: 4px;
-        .tasks-top {
-          display: flex;
-          &__time {
-            width: 50%;
-          }
-          &__place {
-            width: 45%;
-          }
-          &__delete {
-            width: 5%;
-            text-align: right;
-            .trash {
-              color: rgb(46, 45, 92);
+    .content {
+      height: 40px;
+      line-height: 40px;
+      font-size: 18px;
+      margin: 10px 0 40px;
+      border-bottom: 1px solid #333333;
+      display: flex;
+      .left-language {
+        width: 25%;
+        span {
+          font-size: 22px;
+          font-weight: bold;
+          color: #ff3e34;
+        }  
+      }
+      &__box {
+        display: flex;
+        .left {
+          width: 50%;
+          height: 100%;
+          background: white;
+          margin-right: 10px;
+          &__tasks {
+            padding: 5px;
+            margin-bottom: 5px;
+            color: rgb(46, 45, 92);
+            background: #f5f5f5;
+            border: 1px solid rgb(46, 45, 92);
+            border-bottom: 3px solid #bebebe;
+            border-radius: 4px;
+            span {
+              font-weight: bold;
+            }
+            .tasks-top {
+              display: flex;
+              justify-content: space-between;
+              &__time {
+                width: 50%;
+              }
+              &__place {
+                width: 45%;
+              }
+              &__delete {
+                width: 5%;
+                text-align: right;
+                .trash {
+                  color: rgb(46, 45, 92);
+                }
+              }
             }
           }
         }
-      }
-    }
-    .right {
-      width: 50%;
-      height: 100%;
-      // background-image: image-url('todotext.jpg');
-      // background-size: cover;
-      margin-left: 10px;
-      padding: 15px;
-      border-radius: 5%;
-      border: 20px solid #854b13;
-      &__form {
-        height: 80px;
-        padding: 25px 25px 5px;
-        text-align: center;
-        font-size: 30px;
-        font-style: bold;
-      }
-      &__box {
-        .day-form {
-          box-sizing: content-box;
-          display: flex;
-          justify-content: space-between;
-          height: 50px;
-          padding: 20px 0;
-          border-bottom:1px dashed ;
-        }
-        #place {
-          height: 50px;
-          width: 85%;
-        }
-        .time-form {
-          box-sizing: content-box;
-          padding: 20px 0;
-          border-bottom:1px dashed ;
-          display: flex;
-          justify-content: space-between;
-          &__icon {
-            width: 85%;
+        .right {
+          width: 50%;
+          height: 100%;
+          margin-left: 10px;
+          padding: 15px;
+          border-radius: 5%;
+          border: 8px solid #854b13;
+          &__form {
+            height: 80px;
+            padding: 25px 25px 5px;
+            text-align: center;
+            font-size: 30px;
+            font-style: bold;
           }
-        }
-        .time-form select {
-          width: 100px;
-          height: 50px;
-          margin: 0 10px;
-        }
-        .submit-btn {
-          text-align: center;
-        }
-        input.send {
-          margin-top: 20px;
-          padding: 10px 20px;
-          font-size: 1.2em;
-          background-color: #000;
-          color: #fff;
-          border-style: none;
-          border-radius: 8px;
+          &__box {
+            .day-form {
+              box-sizing: content-box;
+              display: flex;
+              justify-content: space-between;
+              height: 50px;
+              padding: 20px 0;
+              border-bottom:1px dashed ;
+            }
+            #place {
+              height: 50px;
+              width: 85%;
+            }
+            .time-form {
+              box-sizing: content-box;
+              padding: 20px 0;
+              border-bottom:1px dashed ;
+              display: flex;
+              justify-content: space-between;
+              &__icon {
+                width: 85%;
+              }
+            }
+            .time-form select {
+              width: 100px;
+              height: 50px;
+              margin: 0 10px;
+            }
+            .submit-btn {
+              text-align: center;
+            }
+            input.send {
+              margin-top: 20px;
+              padding: 10px 20px;
+              font-size: 1.2em;
+              background-color: #000;
+              color: #fff;
+              border-style: none;
+              border-radius: 8px;
+            }
+          }
         }
       }
     }

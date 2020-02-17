@@ -1,6 +1,18 @@
 .today-task
   .today-task__content
-    %h3 ＜Today's schedule＞
+    .detail
+      .word 本日の予定
+      .count 
+        今日のタスクは
+        %span= @task.count  
+        件だよ!
+        %br
+        - if @task.count == 0
+          まだタスクが入力されていないね!  タスクを入力して1日頑張ろう!!
+        - elsif 0 < @task.count && @task.count < 9 then
+          いい感じにタスクを入力できてるね!  この調子で頑張ろう!!
+        - else
+          タスクの量がすごいね!  大変だけど1日頑張っていこう!!
     .back-task.index-column
       .time-t
         Time

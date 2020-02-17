@@ -1,0 +1,17 @@
+.today-task
+  .today-task__content
+    .diary
+      - @diary.each do |diary|
+        .diary__box
+          .diary-top
+            .diary-top__image
+              = image_tag(diary.user.image.url, size: "150x150",class: "imageicon")
+            .diary-top__user
+              .nickname= diary.user.nickname
+              .prefecture= diary.user.prefecture
+              .time= diary.created_at.to_s(:datetime_jp)
+          .diary-bottom
+            .diary-bottom__title
+              = diary.title
+            .diary-bottom__impression
+              = diary.impression

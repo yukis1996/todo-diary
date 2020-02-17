@@ -1,48 +1,58 @@
 .task-content
   .task-content__body
-    .left
-      - @tasks.each do |task|
-        .left__tasks
-          .tasks-top
-            .tasks-top__time
-              Time :
-              = task.beforetime.name
-              〜
-              = task.aftertime.name
-            .tasks-top__place
-              place :
-              = task.place
-            .tasks-top__delete
-              = link_to  "/tasks/#{task.id}", method: :delete, class: "trashicon" do
-                = icon("fa","trash faa-flash animated-hover",class: "trash")
-          .tasks-center
-            Todo :
-            = task.doing
-          .tasks-bottom
-            Memo :
-            = task.memo
-    .right
-      = form_with(model: @task, local: true) do |form|
-        .right__form
-          %h1 Todo List
-        .right__box
-          .day-form
-            ＜Day＞
-            = form.date_field :day, id: "place"
-          .time-form
-            ＜Time＞
-            .time-form__icon
-              = form.collection_select :beforetime_id, Beforetime.all, :id, :name
-              〜
-              = form.collection_select :aftertime_id, Aftertime.all, :id, :name
-          .day-form
-            ＜Place＞
-            = form.text_field :place, placeholder: "場所", id: "place"
-          .day-form
-            ＜Todo＞
-            = form.text_field :doing, placeholder: "やること", id: "place"
-          .day-form
-            ＜Memo＞
-            = form.text_field :memo, placeholder: "メモ", id: "place"
-          .submit-btn
-            = form.submit "SEND", class: "send"
+    .content
+      .left-language 本日入力のタスク
+      .left-language
+        合計
+        %span= @tasks.count
+        件だよ!
+    .content__box
+      .left
+        - @tasks.each do |task|
+          .left__tasks
+            .tasks-top
+              .tasks-top__time
+                %span Time :
+                = task.beforetime.name
+                %span 〜
+                = task.aftertime.name
+              .tasks-top__place
+                %span place :
+                = task.place
+              .tasks-top__delete
+                = link_to  "/tasks/#{task.id}", method: :delete, class: "trashicon" do
+                  = icon("fa","trash faa-flash animated-hover",class: "trash")
+            .tasks-center
+              %span Todo :
+              = task.doing
+            .tasks-top
+              .tasks-bottom
+                %span Memo :
+                = task.memo
+              .tasks-day
+                = task.day
+      .right
+        = form_with(model: @task, local: true) do |form|
+          .right__form
+            %h1 Todo List
+          .right__box
+            .day-form
+              ＜Day＞
+              = form.date_field :day, id: "place"
+            .time-form
+              ＜Time＞
+              .time-form__icon
+                = form.collection_select :beforetime_id, Beforetime.all, :id, :name
+                〜
+                = form.collection_select :aftertime_id, Aftertime.all, :id, :name
+            .day-form
+              ＜Place＞
+              = form.text_field :place, placeholder: "場所", id: "place"
+            .day-form
+              ＜Todo＞
+              = form.text_field :doing, placeholder: "やること", id: "place"
+            .day-form
+              ＜Memo＞
+              = form.text_field :memo, placeholder: "メモ", id: "place"
+            .submit-btn
+              = form.submit "SEND", class: "send"

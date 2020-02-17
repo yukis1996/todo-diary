@@ -1,6 +1,11 @@
 .today-task
   .today-task__content
-    %h3 ＜TaskList＞
+    .detail
+      .word タスク一覧
+      .count-all
+        合計タスク数は
+        %span= @tasks.count  
+        件だよ!
     .show-task.show-column
       .day-show
         Day

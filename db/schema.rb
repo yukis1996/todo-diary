@@ -16,8 +16,10 @@ ActiveRecord::Schema.define(version: 2020_02_16_024707) do
     t.string "title", null: false
     t.text "impression", null: false
     t.integer "status", limit: 1, default: 1, null: false
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_diaries_on_user_id"
   end
 
   create_table "tasks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -48,5 +50,6 @@ ActiveRecord::Schema.define(version: 2020_02_16_024707) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "diaries", "users"
   add_foreign_key "tasks", "users"
 end
