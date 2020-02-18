@@ -1,7 +1,7 @@
 $(function(){
-  $("#list").hover(function(){
+  $("li").hover(function(){
     $("#drop:not(:animated)", this).slideDown();
-    $("#drop").css("background", "rgba(255, 243, 202, 0.664)"
+    $("ul").css("background", "#FF8F00"
     );
   },function(){
     $("#drop", this).slideUp();

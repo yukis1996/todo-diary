@@ -9,7 +9,7 @@ class TasksController < ApplicationController
   
   def new
     @task = Task.new
-    @tasks = current_user.tasks.where(created_at: Date.current.beginning_of_day..Date.current.end_of_day)
+    @tasks = current_user.tasks.where(created_at: Date.current.beginning_of_day..Date.current.end_of_day).order("day", "beforetime_id")
     # @tasks = Task.where('created_at >= ?', Date.today).where('created_at =< ?', Date.today)
   end
 

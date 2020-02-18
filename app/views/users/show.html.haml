@@ -1,17 +1,22 @@
 .today-task
   .today-task__content
-    %h3 ＜TaskList＞
+    .detail
+      .word タスク一覧
+      .count-all
+        合計タスク数は
+        %span= @tasks.count  
+        件だよ!
     .show-task.show-column
       .day-show
-        Day
+        日付
       .time-show
-        Time
+        時間
       .todo-show
-        Todo
+        やること
       .place-show
-        Place
+        場所
       .memo-show
-        Memo
+        メモ
     - @tasks.each do |task|
       .show-task.each-date
         .day-show

@@ -1,15 +1,37 @@
 .today-task {
-  padding-top: 180px;
-  // max-height: 1000px;
+  padding-top: 100px;
   &__content {
     margin: 0 auto;
     width: 1300px;
-    h3 {
-      font-size: 30px;
+    .detail {
+      display: flex;
+      justify-content: space-between;
+      border-top: 2px dashed #333333;
+      border-bottom: 2px dashed #333333;
+      margin: 20px 0;
+      height: 110px;
+      color: #333333;
+      .word {
+        font-size: 30px;
+        padding: 30px 20px;
+        font-weight: bold;
+      }
+      .count {
+        font-size: 18px;
+        line-height: 50px;
+      }
+      .count-all{
+        font-size: 18px;
+        line-height: 150px;
+      }
+      span {
+        font-size: 22px;
+        font-weight: bold;
+        color: #ff3e34;
+      }
     }
     .back-task {
       display: flex;
-      // border: 1px solid;
       margin-bottom: 3px;
       padding: 4px 3px;
       .time-t {
@@ -26,8 +48,10 @@
       }
     }
     .index-column {
-      background:  #e0586f;
+      background:  #ff3e34;
       color: white;
+      font-weight: bold;
+      border-bottom: 3px solid #d90b0093;
     }
   }
 }

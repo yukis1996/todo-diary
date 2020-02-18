@@ -4,24 +4,30 @@
       = link_to  icon('fas', 'book' , "Todo-Diary", class: 'book') ,tasks_path, class: "title"
     %ul.right
       - if user_signed_in?
-        %li.box
-          = link_to "Today", tasks_path
-        %li.box
-          = link_to "Todo", new_task_path
         %li#list.box
-          = link_to "User", "/users/#{current_user.id}"
+          = link_to "日記", diaries_path
           %ul#drop
-            %li= link_to "My tasks", "/users/#{current_user.id}"
-            %li= link_to "Profile", "/users//#{current_user.id}/edit"
+            %li= link_to "日記一覧", diaries_path
+            %li= link_to "投稿", new_diary_path
+        %li#list.box
+          = link_to "やること", new_task_path
+          %ul#drop
+            %li= link_to "今日の予定", tasks_path
+            %li= link_to "タスク入力", new_task_path
+        %li#list.box
+          = link_to "ユーザー", "/users/#{current_user.id}"
+          %ul#drop
+            %li= link_to "タスク一覧", "/users/#{current_user.id}"
+            %li= link_to "プロフィール", "/users//#{current_user.id}/edit"
         %li.box
-          = link_to "Logout", destroy_user_session_path, method: :delete
+          = link_to "ログアウト", destroy_user_session_path, method: :delete
       - else
         .box.new-account
           = link_to new_user_registration_path, class:"new-account faa-parent animated-hover" do
             = icon('far', 'user-circle faa-flash', class: 'book')
-            Sign up
+            新規登録
         .box.sign-in
           = link_to new_user_session_path, class:"sign-in faa-parent animated-hover" do
             = icon('fas', 'sign-in-alt faa-flash', class: 'book')
-            Login
+            ログイン
           //= icon('fas', 'book faa-float animated', class: 'book')のような形でアニメーションをつけられる

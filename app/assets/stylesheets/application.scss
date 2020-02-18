@@ -2,13 +2,17 @@
 @import "./background";
 @import "users/*";
 @import "tasks/*";
+@import "diaries/*";
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
 html {
   margin: 0;
   padding: 0;
-  background: $bg-color;
+}
+
+body {
+  background: #ffffff;
 }
 
 * {

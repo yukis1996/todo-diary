@@ -4,6 +4,7 @@ class CreateDiaries < ActiveRecord::Migration[5.2]
       t.string :title, null: false
       t.text :impression, null: false
       t.integer :status, default: 1, null: false, limit: 1
+      t.references :user, foreign_key: true
       t.timestamps
     end
   end
