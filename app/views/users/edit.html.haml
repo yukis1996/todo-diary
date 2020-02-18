@@ -1,37 +1,45 @@
 .today-task
   .today-task__content
     = form_for(current_user) do |f|
+      %h6 プロフィール編集
       .profile
         .profile__box
           .profile__box__left
-            プロフィール編集
-            .field
+            .field-icon
               .field-label
                 = f.label :image do
                   = image_tag(current_user.image.url, size: "250x250",class: "imageicon")
               .field-image
                 = f.file_field :image, autofocus: true
-            クリックして画像を変更
-          .profile__box__left
+            %p クリックして画像を変更
+          .profile__box__text
             .field
               .field-label
-                = f.label :nickname
+                %label ニックネーム
+                %br
               .field-input
                 = f.text_field :nickname, autofocus: true
             .field
               .field-label
-                = f.label :email
+                %label メールアドレス
+                %br
               .field-input
                 = f.email_field :email
             .field
-              %p出身地
-              = current_user.prefecture
-          .profile__box__left
+              .field-label
+                %label 出身地
+                %br
+              .field-input
+                = current_user.prefecture
+          .profile__box__text
             .field
               本日のタスク数 :
               = @task.count
             .field
               総タスク数 :
               = current_user.tasks.count
+            .field
+              総日記数 :
+              = current_user.diaries.count
         .actions
-          = f.submit "Update", class: 'btn'
+          = f.submit "変更内容を更新する", class: 'btn'

@@ -1,5 +1,7 @@
 .today-task
   .today-task__content
+    .top-text
+      みんなの投稿日記
     .diary
       - @diary.each do |diary|
         .diary__box
@@ -12,6 +14,7 @@
               .time= diary.created_at.to_s(:datetime_jp)
           .diary-bottom
             .diary-bottom__title
+              タイトル :
               = diary.title
             .diary-bottom__impression
-              = diary.impression
+              = simple_format(diary.impression)

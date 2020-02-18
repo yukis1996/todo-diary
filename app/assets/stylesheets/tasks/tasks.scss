@@ -64,6 +64,8 @@
           margin-left: 10px;
           padding: 15px;
           border-radius: 5%;
+          box-shadow: 10px 10px 15px -10px #5d5d5d;
+          background: #fff6ece3;
           border: 8px solid #854b13;
           &__form {
             height: 80px;
@@ -79,16 +81,24 @@
               justify-content: space-between;
               height: 50px;
               padding: 20px 0;
-              border-bottom:1px dashed ;
+              // border-bottom:1px dashed ;
             }
             #place {
               height: 50px;
-              width: 85%;
+              width: 83%;
+              border: none;
+              background: none;
+              border-bottom: 2px solid #c9c3bb;
+              transition: border-color 0.3s;    
             }
+            #place:focus {
+              border-bottom: 2px solid #00787f;
+              outline: none;
+            }    
             .time-form {
               box-sizing: content-box;
               padding: 20px 0;
-              border-bottom:1px dashed ;
+              // border-bottom:1px dashed ;
               display: flex;
               justify-content: space-between;
               &__icon {
@@ -99,6 +109,14 @@
               width: 100px;
               height: 50px;
               margin: 0 10px;
+              border: none;
+              background: none;
+              border-bottom: 2px solid #c9c3bb;
+              transition: border-color 0.3s;
+            }
+            select:focus {
+              border-bottom: 2px solid #00787f;
+              outline: none;
             }
             .submit-btn {
               text-align: center;
@@ -107,11 +125,17 @@
               margin-top: 20px;
               padding: 10px 20px;
               font-size: 1.2em;
-              background-color: #000;
-              color: #fff;
-              border-style: none;
+              background-color: #F5F5F5;
+              color: #333333;
+              box-shadow: 10px 10px 15px -10px #5d5d5d;
               border-radius: 8px;
+              font-weight: bold;
+              transition: 0.3s;
             }
+            .send:hover {
+              background: #FF8F00;
+              color:#fff8f7;
+            }        
           }
         }
       }

@@ -1,27 +1,23 @@
 .today-task
   .today-task__content
-    .right
+    .top-text
+      今日あった出来事を日記にしよう
+    .bottom
       = form_with(model: @diary, local: true) do |form|
-        .right__form
-          %h1 Todo List
-        .right__box
-          -# .day-form
-          -#   ＜Day＞
-          -#   = form.date_field :day, id: "place"
-          -# .time-form
-          -#   ＜Time＞
-          -#   .time-form__icon
-          -#     = form.collection_select :beforetime_id, Beforetime.all, :id, :name
-          -#     〜
-          -#     = form.collection_select :aftertime_id, Aftertime.all, :id, :name
-          .day-form
-            ＜Place＞
-            = form.text_field :title, placeholder: "場所", id: "place"
-          .day-form
-            ＜Todo＞
-            = form.text_area :impression, placeholder: "やること", id: "place"
-          -# .day-form
-          -#   ＜Memo＞
-          -#   = form.text_field :memo, placeholder: "メモ", id: "place"
-          .submit-btn
-            = form.submit "SEND", class: "send"
+        .bottom__box
+          .bottom__box__user
+            .user-iamge
+              = image_tag(current_user.image.url, size: "150x150",class: "imageicon")
+            .user-name
+              = current_user.nickname
+              さん
+          .bottom__box__form
+            .title-form
+              タイトル :
+              = form.text_field :title, placeholder: "タイトル", id: "place"
+            .impression-form
+              感想
+              %br
+              = form.text_area :impression, placeholder: "感想", id: "place"
+            .submit-btn
+              = form.submit "投稿する", class: "send"

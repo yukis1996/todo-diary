@@ -34,25 +34,25 @@
       .right
         = form_with(model: @task, local: true) do |form|
           .right__form
-            %h1 Todo List
+            %h1 -- 予定を入力 --
           .right__box
             .day-form
-              ＜Day＞
+              <日程>
               = form.date_field :day, id: "place"
             .time-form
-              ＜Time＞
+              <時間>
               .time-form__icon
                 = form.collection_select :beforetime_id, Beforetime.all, :id, :name
                 〜
                 = form.collection_select :aftertime_id, Aftertime.all, :id, :name
             .day-form
-              ＜Place＞
+              <場所>
               = form.text_field :place, placeholder: "場所", id: "place"
             .day-form
-              ＜Todo＞
+              <やること>
               = form.text_field :doing, placeholder: "やること", id: "place"
             .day-form
-              ＜Memo＞
+              <メモ>
               = form.text_field :memo, placeholder: "メモ", id: "place"
             .submit-btn
-              = form.submit "SEND", class: "send"
+              = form.submit "タスクを登録", class: "send"
