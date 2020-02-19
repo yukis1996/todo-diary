@@ -1,9 +1,9 @@
 .task-content {
-  height: 100vh;
-  padding-top: 100px;
+  // height: 100vh;
+  padding-top: 70px;
   &__body {
     width: 1300px;
-    height: 680px;
+    height: 600px;
     margin: 0 auto;
     justify-content: space-between;
     .content {
@@ -25,9 +25,10 @@
         display: flex;
         .left {
           width: 50%;
-          height: 100%;
+          height: 600px;
           background: white;
           margin-right: 10px;
+          overflow: scroll;
           &__tasks {
             padding: 5px;
             margin-bottom: 5px;
@@ -60,7 +61,7 @@
         }
         .right {
           width: 50%;
-          height: 100%;
+          height: 600px;
           margin-left: 10px;
           padding: 15px;
           border-radius: 5%;
@@ -68,8 +69,8 @@
           background: #fff6ece3;
           border: 8px solid #854b13;
           &__form {
-            height: 80px;
-            padding: 25px 25px 5px;
+            height: 70px;
+            padding: 5px 25px;
             text-align: center;
             font-size: 30px;
             font-style: bold;
@@ -80,8 +81,7 @@
               display: flex;
               justify-content: space-between;
               height: 50px;
-              padding: 20px 0;
-              // border-bottom:1px dashed ;
+              padding: 15px 0;
             }
             #place {
               height: 50px;
@@ -98,7 +98,6 @@
             .time-form {
               box-sizing: content-box;
               padding: 20px 0;
-              // border-bottom:1px dashed ;
               display: flex;
               justify-content: space-between;
               &__icon {
@@ -135,7 +134,11 @@
             .send:hover {
               background: #FF8F00;
               color:#fff8f7;
-            }        
+            }  
+            input:active {
+              transform: translateY(2px);
+              border-bottom: none;
+            }            
           }
         }
       }

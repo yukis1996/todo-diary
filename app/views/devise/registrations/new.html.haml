@@ -8,7 +8,7 @@
         = f.text_field :nickname, autofocus: true, autocomplete: "nickname"
       .field
         %h3 ＜出身地＞
-        = f.text_field :prefecture, autofocus: true, autocomplete: "prefecture"
+        = f.collection_select :prefecture_id, Prefecture.all, :id, :name, prompt: "---"
       .field
         %h3 ＜メールアドレス＞
         = f.email_field :email, autofocus: true, autocomplete: "email"

@@ -1,36 +1,66 @@
 .sign-up {
-  width: 1440px;
+  margin: 0 auto;
+  width: 530px;
+  padding-top: 100px;
   &__content {
-    width: 500px;
-    margin: 0 auto;
+    border: 1px solid #c0c0c0;
+    border-radius: 8px;
+    box-shadow: 10px 10px 15px -10px #5d5d5d;  
     padding: 30px;
     h2 {
       height: 50px;
       line-height: 50px;
-      font-size: 16px;
-      text-align: center;
-      background: rgba(243, 209, 181, 0.45);
+      font-size: 22px;
+      font-weight: bold;
       border-radius: 8px;
     }
     .field {
-      margin-top: 15px;
+      margin-top: 30px;
+      h3 {
+        font-weight: bold;
+      }
       input {
         height: 40px;
         width: 100%;
+        border: none;
+        background: none;
+        border-bottom: 2px solid #c9c3bb;
+        transition: border-color 0.3s;
+      }
+      input:focus {
+        border-bottom: 2px solid #00787f;
+        outline: none;
+      }
+      select {
+        height: 40px;
+        // width: 100%;
+        border: none;
+        background: none;
+        border-bottom: 2px solid #c9c3bb;
+        transition: border-color 0.3s;
+      }
+      select:focus {
+        border-bottom: 2px solid #00787f;
+        outline: none;
       }
     }
     .actions {
-      margin-top: 20px;
+      margin-top: 40px;
       text-align: center;
       .register {
-        padding: 3px;
-        font-size: 17px;
+        padding: 10px 20px;
+        font-size: 1.2em;
         border-radius: 5px;
         border-bottom: solid 3px lightgray;
         box-shadow: 3px 3px 3px gray;
         transition: 0.3s;
       }
-      .click-down:active {
+      input:hover {
+        background: #FF8F00;
+        color:#fff8f7;
+        border-bottom: solid 3px #ce7100;
+      }  
+      input:active {
         transform: translateY(2px);
         border-bottom: none;
       }

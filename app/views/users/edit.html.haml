@@ -1,7 +1,7 @@
 .today-task
   .today-task__content
     = form_for(current_user) do |f|
-      %h6 プロフィール編集
+      %h4 プロフィール編集
       .profile
         .profile__box
           .profile__box__left
@@ -30,7 +30,7 @@
                 %label 出身地
                 %br
               .field-input
-                = current_user.prefecture
+                = current_user.prefecture.name
           .profile__box__text
             .field
               本日のタスク数 :

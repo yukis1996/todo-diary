@@ -1,7 +1,7 @@
 .today-task
   .today-task__content
     .top-text
-      みんなの投稿日記
+      みんなの日記
     .diary
       - @diary.each do |diary|
         .diary__box
@@ -10,7 +10,7 @@
               = image_tag(diary.user.image.url, size: "150x150",class: "imageicon")
             .diary-top__user
               .nickname= diary.user.nickname
-              .prefecture= diary.user.prefecture
+              .prefecture= diary.user.prefecture.name
               .time= diary.created_at.to_s(:datetime_jp)
           .diary-bottom
             .diary-bottom__title
