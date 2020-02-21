@@ -2,7 +2,7 @@ class DiariesController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @diary = Diary.all
+    @diary = Diary.all.order("created_at DESC")
   end
 
   def new
@@ -11,8 +11,12 @@ class DiariesController < ApplicationController
 
 
   def create
-    Diary.create(diary_params)
-    redirect_to root_path
+    @diary = Diary.new(diary_params)
+    if @diary.save
+      redirect_to diaries_path, notice: "投稿しました"
+    else
+      redirect_to new_diary_path, alert: "入力に不備があります"
+    end
   end
 
 

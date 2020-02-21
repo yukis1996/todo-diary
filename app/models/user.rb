@@ -7,7 +7,7 @@ class User < ApplicationRecord
   has_many :diaries
   mount_uploader :image, ImageUploader
 
-  validates :nickname, presence: true, length: { in: 2..10 }
+  validates :nickname, presence: true, length: { maximum: 10 }
   validates :email, presence: true
   validates :encrypted_password, presence: true, length: { minimum: 8 }
   validates :prefecture_id, presence: true

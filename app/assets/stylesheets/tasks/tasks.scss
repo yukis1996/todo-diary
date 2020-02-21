@@ -44,13 +44,13 @@
               display: flex;
               justify-content: space-between;
               &__time {
-                width: 50%;
+                width: 32%;
               }
               &__place {
-                width: 45%;
+                width: 66%;
               }
               &__delete {
-                width: 5%;
+                width: 2%;
                 text-align: right;
                 .trash {
                   color: rgb(46, 45, 92);

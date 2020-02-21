@@ -2,23 +2,38 @@
 = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
   = render "devise/shared/error_messages", resource: resource
   .field
-    %h3 ＜ニックネーム＞
-    = f.text_field :nickname, autofocus: true, autocomplete: "nickname"
+    .have
+      %h3 ＜ニックネーム＞
+      .must__language
+        必須
+    = f.text_field :nickname, autofocus: true, autocomplete: "nickname", placeholder: "10文字以内で入力"
   .field
-    %h3 ＜出身地＞
+    .have
+      %h3 ＜出身地＞
+      .must__language
+        必須
     = f.collection_select :prefecture_id, Prefecture.all, :id, :name, prompt: "---"
   .field
-    %h3 ＜メールアドレス＞
+    .have
+      %h3 ＜メールアドレス＞
+      .must__language
+        必須
     = f.email_field :email, autofocus: true, autocomplete: "email"
   .field
-    %h3 ＜パスワード＞
+    .have
+      %h3 ＜パスワード＞
+      .must__language
+        必須
     - if @minimum_password_length
       %em
         -# (#{@minimum_password_length} characters minimum)
-    = f.password_field :password, autocomplete: "new-password"
+    = f.password_field :password, autocomplete: "new-password", placeholder: "8文字以上で入力"
   .field
-    %h3 ＜パスワードの再確認＞
-    = f.password_field :password_confirmation, autocomplete: "new-password"
+    .have
+      %h3 ＜パスワードの再確認＞
+      .must__language
+        必須
+    = f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "8文字以上で入力"
   .submit
     = f.submit "登録する"
 -# = render "devise/shared/links"

@@ -14,14 +14,25 @@ class TasksController < ApplicationController
   end
 
   def create
-    Task.create(task_params)
-    redirect_to new_task_path
+    @tasks = current_user.tasks.where(created_at: Date.current.beginning_of_day..Date.current.end_of_day).order("day", "beforetime_id")
+    @task = Task.new(task_params)
+    if @task.save
+      redirect_to new_task_path
+    else
+      if @task.day == nil
+        redirect_to new_task_path, alert: "日程を入力してください"
+      elsif @task.beforetime_id > @task.aftertime_id
+        redirect_to new_task_path, alert: "開始時刻以降の時刻を選択してください"
+      else
+        redirect_to new_task_path, alert: "入力に不備があります"
+      end
+    end
   end
 
   def destroy
     task = Task.find(params[:id])
     task.destroy
-    redirect_to new_task_path
+    redirect_back(fallback_location:index)
   end
 
   def show

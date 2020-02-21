@@ -22,3 +22,17 @@ body {
 a {
   text-decoration: none;
 }
+
+.must {
+  &__language {
+    width: 48px;
+    color: #333333;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid #ff3e34;
+    border-radius: 4px;
+  }
+}
+.have {
+  display: flex;
+}

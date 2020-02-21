@@ -14,10 +14,10 @@
           .bottom__box__form
             .title-form
               タイトル :
-              = form.text_field :title, placeholder: "タイトル", id: "place"
+              = form.text_field :title, placeholder: "15文字以内で入力", id: "place"
             .impression-form
               感想
               %br
-              = form.text_area :impression, placeholder: "感想", id: "place"
+              = form.text_area :impression, placeholder: "150文字以内で入力", id: "place"
             .submit-btn
               = form.submit "投稿する", class: "send"
