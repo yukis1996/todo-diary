@@ -1,22 +1,21 @@
 .show-task {
   display: flex;
-  // border: 1px solid #4a74cf;;
   margin-bottom: 3px;
   padding: 4px 3px;
   .day-show {
-    width: 10%;
+    width: 9%;
   }
   .time-show {
-    width: 13%;
+    width: 12%;
   }
   .todo-show {
-    width: 35%;
+    width: 26%;
   }
   .place-show {
-    width: 17%;
+    width: 26%;
   }
   .memo-show {
-    width: 23%;
+    width: 26%;
   }
 }
 .show-column {
@@ -26,7 +25,6 @@
   border-bottom: 3px solid #003c86;
 }
 .each-date {
-  // border: 1px solid #896345;
   background: #efedebc2;
   color: #333333;
   border-bottom: 1.5px solid #d7d2cc;

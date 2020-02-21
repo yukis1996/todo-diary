@@ -33,11 +33,17 @@
                 = task.day
       .right
         = form_with(model: @task, local: true) do |form|
+          - @task.errors.each do |msg|
+            .alert.alert-danger
+              = msg
           .right__form
             %h1 -- 予定を入力 --
           .right__box
             .day-form
-              <日程>
+              .must
+                <日程>
+                .must__language
+                  必須
               = form.date_field :day, id: "place"
             .time-form
               <時間>
@@ -47,12 +53,15 @@
                 = form.collection_select :aftertime_id, Aftertime.all, :id, :name
             .day-form
               <場所>
-              = form.text_field :place, placeholder: "場所", id: "place"
+              = form.text_field :place, placeholder: "20文字以内で入力", id: "place"
             .day-form
-              <やること>
-              = form.text_field :doing, placeholder: "やること", id: "place"
+              .must
+                <やること>
+                .must__language
+                  必須
+              = form.text_field :doing, placeholder: "20文字以内で入力", id: "place"
             .day-form
               <メモ>
-              = form.text_field :memo, placeholder: "メモ", id: "place"
+              = form.text_field :memo, placeholder: "20文字以内で入力", id: "place"
             .submit-btn
               = form.submit "タスクを登録", class: "send"

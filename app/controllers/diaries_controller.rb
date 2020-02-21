@@ -1,23 +1,22 @@
 class DiariesController < ApplicationController
+  before_action :authenticate_user!
 
   def index
-    @diary = Diary.all
-    # @diaries = Diary.includes(:user)
-    # @diary = Diary.all
-    # @user = User.find_by(id: params[:id])
-    # @user = User.find(id: @diary.user_id)
+    @diary = Diary.all.order("created_at DESC")
   end
 
   def new
     @diary = Diary.new
-    # @tasks = current_user.tasks.where(created_at: Date.current.beginning_of_day..Date.current.end_of_day)
-    # @tasks = Task.where('created_at >= ?', Date.today).where('created_at =< ?', Date.today)
   end
 
 
   def create
-    Diary.create(diary_params)
-    redirect_to root_path
+    @diary = Diary.new(diary_params)
+    if @diary.save
+      redirect_to diaries_path, notice: "投稿しました"
+    else
+      redirect_to new_diary_path, alert: "入力に不備があります"
+    end
   end
 
 

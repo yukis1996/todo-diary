@@ -1,7 +1,7 @@
 .header
   .header__body
     .left
-      = link_to  icon('fas', 'book' , "Todo-Diary", class: 'book') ,tasks_path, class: "title"
+      = link_to  icon('fas', 'book' , "Todo-Diary", class: 'book') ,root_path, class: "title"
     %ul.right
       - if user_signed_in?
         %li#list.box

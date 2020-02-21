@@ -1,13 +1,14 @@
 .tp-content
   .tp-content__body
     .text
-      %h2タスク管理と日記で
+      %h2 Todo-Diary を使って
       %br
-      %h2毎日を充実させよう!!
-    .new
-      %a#js-modal-open{href: ""} 始める
-    .modal#js-modal
-      .modal__back#js-modal-close
-      .modal__content
-        = render 'devise/registrations/new'
-        %a#js-modal-close{href: ""} 閉じる
+      %h2 毎日を充実させよう !!
+    - unless user_signed_in?
+      .new
+        %a#js-modal-open{href: ""} 始める
+      .modal#js-modal
+        .modal__back#js-modal-close
+        .modal__content
+          = render 'devise/registrations/new'
+          %a#js-modal-close{href: ""} 閉じる
