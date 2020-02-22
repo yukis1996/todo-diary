@@ -8,6 +8,5 @@ class Beforetime < ActiveHash::Base
     {id: 16, name: '15:00'}, {id: 17, name: '16:00'}, {id: 18, name: '17:00'}, 
     {id: 19, name: '18:00'}, {id: 20, name: '19:00'}, {id: 21, name: '20:00'}, 
     {id: 22, name: '21:00'}, {id: 23, name: '22:00'}, {id: 24, name: '23:00'},
-    {id: 25, name: '24:00'},
   ]
 end
