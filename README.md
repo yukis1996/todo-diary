@@ -9,7 +9,7 @@ Todo-Diaryは日々のやること入力しスケジュール管理ができま�
 5.[今後の展開](#今後の展開)  
 6.[製作者](#製作者)
 
-## *機能*
+### *機能*
 ---
 * ユーザー登録
 * タスクを入力し保存する
@@ -20,14 +20,14 @@ Todo-Diaryは日々のやること入力しスケジュール管理ができま�
 
 <br>
 
-## *デモ画像*
+### *デモ画像*
 ---
 <!-- ![デモ](https://user-images.githubusercontent.com/58467980/75109626-650a9000-5668-11ea-9ea2-6b366b63afc7.png) -->
 * *タスク入力*
   * 日程や時間などを入力し保存が行えます
   * 「今日」入力したものが表示されます
 
-<img src="https://user-images.githubusercontent.com/58467980/75109626-650a9000-5668-11ea-9ea2-6b366b63afc7.png" height="300px" width="100%">
+<img src="https://user-images.githubusercontent.com/58467980/75109626-650a9000-5668-11ea-9ea2-6b366b63afc7.png">
 
 * *本日の予定*
   * 入力されたタスクの内、日程が「今日」のものを表示します
@@ -40,7 +40,7 @@ Todo-Diaryは日々のやること入力しスケジュール管理ができま�
 <img width="1440" alt="diaryimage" src="https://user-images.githubusercontent.com/58467980/75110450-a2bfe680-5671-11ea-849b-b5a4cef8721f.png">
 
 
-## *開発環境*
+### *開発環境*
 ---
 * Ruby 2.5.1
 * Ruby on Rails 5.2.3
@@ -49,7 +49,7 @@ Todo-Diaryは日々のやること入力しスケジュール管理ができま�
 
 <br>
 
-## *DB設計*
+### *DB設計*
 ---
 
 ## usersテーブル
@@ -94,7 +94,7 @@ Todo-Diaryは日々のやること入力しスケジュール管理ができま�
 
 <br>
 
-## *今後の展開*
+### *今後の展開*
 ---
 - [ ] タスク編集機能
 - [ ] タスクに優先度のカラムを追加
@@ -106,7 +106,7 @@ Todo-Diaryは日々のやること入力しスケジュール管理ができま�
 
 <br>
 
-## *製作者*
+### *製作者*
 ---
 yukis1996 ゆう  
 Github: https://github.com/yukis1996    
