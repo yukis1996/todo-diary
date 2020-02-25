@@ -51,6 +51,24 @@
         background: #ff3e34cc;
         transition: .3s;
       }
+      .test {
+        margin-right: 10px;
+        input {
+          background: none;
+          border: none;
+          transition: .3s;
+          height: 55px;
+          line-height: 55px;
+          display: block;
+          font-weight: bold;
+          color: #fff8f7;
+          cursor: pointer;
+        }
+        input:hover {
+          background: #ff3e34cc;
+          transition: .3s;
+        }
+      }
     }
   }
 }
