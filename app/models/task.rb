@@ -1,6 +1,7 @@
 class Task < ApplicationRecord
   belongs_to :user
 
+  validates :user_id, presence: true
   validates :day, presence: true
   validates :aftertime_id, numericality: {greater_than_or_equal_to: :beforetime_id}
   validates :place, length: { maximum: 20 }
