@@ -15,7 +15,6 @@ describe Task do
           place: "abcdefghij1234567890",
           doing: "1234567890abcdefghij",
           memo: "qrstuvwxyz0987654321",
-          user_id: 1
         )
         expect(task).to be_valid
       end
