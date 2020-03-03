@@ -33,13 +33,13 @@
                 = current_user.prefecture.name
           .profile__box__text
             .field
-              本日のタスク数 :
+              今日のタスク数 :
               = @task.count
             .field
               総タスク数 :
               = current_user.tasks.count
             .field
-              総日記数 :
+              総日記投稿数 :
               = current_user.diaries.count
         .actions
           = f.submit "変更内容を更新する", class: 'btn'

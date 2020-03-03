@@ -92,7 +92,7 @@
     .new {
       margin-top: 100px;
       font-size: 20px;
-      #js-modal-open {
+      .js-modal-open {
         padding: 10px 20px;
         width: 100px;
         border: 1px solid lightgray;
@@ -103,7 +103,7 @@
         box-shadow: 3px 3px 3px gray;
         transition: 0.3s;
       }
-      #js-modal-open:hover {
+      .js-modal-open:hover {
         background: #FF8F00;
         color:#fff8f7;
         border: 1px solid #ce7100;
@@ -150,7 +150,6 @@
           flex-direction: column;
           height: 70px;
           margin-top: 30px;
-          // font-weight: bold;
           text-align: left;
           margin: 20px 0 0 0;
           input {
@@ -200,7 +199,7 @@
           border: 1px solid #ce7100;
           border-bottom: solid 3px #ce7100;
         }
-        #js-modal-close {
+        .js-modal-close {
           font-size: 18px;
           width: 100%;
           padding: 5px 10px;
@@ -212,11 +211,41 @@
           box-shadow: 3px 3px 3px gray;
           transition: 0.3s;
         }
-        #js-modal-close:hover {
+        .js-modal-close:hover {
           background: #FF8F00;
           color:#fff8f7;
           border: 1px solid #ce7100;
           border-bottom: solid 3px #ce7100;
+        }
+      }
+    }
+  }
+  .tip {
+    // margin-top: 200px;
+    &__back {
+      width: 100vw;
+      font-size: 24px;
+      font-weight: bold;
+      // background: #fff7ff;
+      background: #fff;
+      margin: 100px 0;
+      color: #333333;
+      box-shadow: 0px 0px 15px -5px #766a5c;
+      &__content {
+        width: 1440px;
+        padding: 20px 112px;
+        margin: 150px auto 100px;
+        .title {
+          font-size: 20px;
+          margin: 0 0 20px 0;
+        }
+        p {
+          font-size: 28px;
+        }
+        .demo_new {
+          margin: 40px 20px 20px;
+          border-radius: 8px;
+          box-shadow: 0px 0px 20px -5px #766a5c;
         }
       }
     }

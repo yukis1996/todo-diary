@@ -27,12 +27,12 @@ Todo-Diaryは日々のやること入力しスケジュール管理ができま�
   * 日程や時間などを入力し保存が行えます
   * 「今日」入力したものが表示されます
 
-<img src="https://user-images.githubusercontent.com/58467980/75109626-650a9000-5668-11ea-9ea2-6b366b63afc7.png">
+<img width="1440" alt="task_new_2" src="https://user-images.githubusercontent.com/58467980/75649831-a8cc4d80-5c97-11ea-9174-6d7eafd82177.png">
 
-* *本日の予定*
+* *今日の予定*
   * 入力されたタスクの内、日程が「今日」のものを表示します
 
-<img width="1440" alt="today-tasks" src="https://user-images.githubusercontent.com/58467980/75110031-24ad1100-566c-11ea-852c-a1d7400fbf13.png">
+<img width="1326" alt="task_today_2" src="https://user-images.githubusercontent.com/58467980/75649906-d44f3800-5c97-11ea-87e7-0d435a673943.png">
 
 * *日記一覧*
   * 各投稿者が1日の出来事を日記にして投稿できます

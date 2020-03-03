@@ -3,12 +3,44 @@
     .text
       %h2 Todo-Diary を使って
       %br
-      %h2 毎日を充実させよう !!
+      %h2 毎日を充実させよう
     - unless user_signed_in?
       .new
-        %a#js-modal-open{href: ""} 始める
-      .modal#js-modal
-        .modal__back#js-modal-close
+        %a.js-modal-open{"data-target" => "modal01", href: ""} 始める
+      #modal01.modal.js-modal
+        .modal__back.js-modal-close
         .modal__content
           = render 'devise/registrations/new'
-          %a#js-modal-close{href: ""} 閉じる
+          %a.js-modal-close{href: ""} 閉じる
+  .tip
+    .tip__back
+      .tip__back__content
+        .title 使用方法①  タスクの入力
+        %p タスクを入力することができます
+        %p １日やることを整理しましょう
+        = image_tag("demo_new.png", width: "100%", height: "550px", class: "demo_new")
+    .tip__back
+      .tip__back__content
+        .title 使用方法②  タスクの確認
+        %p 入力した「今日」やることを確認できます
+        %p １日の予定を円滑に進めていきましょう
+        = image_tag("demo_task_today.png", width: "100%", height: "450px", class: "demo_new")
+    .tip__back
+      .tip__back__content
+        .title 使用方法③  日記の投稿
+        %p １日行ったことをまとめましょう
+        %p 日記を投稿して１日を締めくくることができます
+        = image_tag("demo_diary.png", width: "100%", height: "550px", class: "demo_new")
+  .tp-content__body
+    .text
+      %h2 Todo-Diary で思考を整理
+      %br
+      %h2 心も生活も豊かに
+    - unless user_signed_in?
+      .new
+        %a.js-modal-open{"data-target" => "modal02", href: ""} 始める
+      #modal02.modal.js-modal
+        .modal__back.js-modal-close
+        .modal__content
+          = render 'devise/registrations/new'
+          %a.js-modal-close{href: ""} 閉じる
